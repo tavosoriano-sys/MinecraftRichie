@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#263b2b">
+<meta name="description" content="¡Ricardo cumple 9! Sábado 12 de diciembre de 2026, 3:00 p. m. Confirma tu asistencia por WhatsApp.">
+<meta property="og:title" content="¡Ricardo cumple 9!">
+<meta property="og:description" content="Te esperamos el 12 de diciembre a las 3:00 p. m. ¡Únete a la aventura!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tavosoriano-sys.github.io/MinecraftRichie/invitacion.png">
+<meta property="og:url" content="https://tavosoriano-sys.github.io/MinecraftRichie/">
+<title>Ricardo cumple 9 | Invitación</title>
+<style>
+  :root{
+    --forest:#263b2b; --leaf:#527b45; --grass:#789b58; --cream:#f4eedc;
+    --paper:#fffaf0; --ink:#29352b; --muted:#697465; --gold:#d8ad55;
+    --dirt:#806044; --line:#ded7c4; --blue:#6b9db0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--ink); font-family:Georgia,"Times New Roman",serif;
+    background:
+      radial-gradient(circle at 15% 12%,rgba(120,155,88,.13),transparent 24rem),
+      radial-gradient(circle at 90% 75%,rgba(107,157,176,.12),transparent 22rem),
+      #e9e5d7;
+  }
+  .page{width:min(760px,calc(100% - 28px));margin:28px auto 40px}
+  .invite{
+    position:relative; overflow:hidden; background:var(--paper);
+    border:1px solid #d5cfbd; border-radius:10px;
+    box-shadow:0 18px 55px rgba(36,48,35,.16);
+  }
+  .topline{height:12px;background:repeating-linear-gradient(90deg,var(--leaf) 0 28px,#6d8f4e 28px 56px,var(--gold) 56px 64px)}
+  .hero{position:relative;padding:42px 30px 30px;text-align:center;background:linear-gradient(180deg,#e9f0df 0%,#f7f2e4 75%)}
+  .eyebrow{font:700 11px/1.4 Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#617452}
+  h1{margin:13px 0 5px;font-size:clamp(43px,9vw,70px);line-height:.98;color:var(--forest);font-weight:900;letter-spacing:-2px}
+  .subtitle{margin:12px 0 0;font:15px/1.6 Arial,sans-serif;color:#5f6d59}
+  .minecraft-art{max-width:390px;height:310px;margin:25px auto 0;overflow:hidden;border:7px solid #fffaf0;outline:1px solid #d5cfbd;border-radius:5px;box-shadow:0 9px 24px rgba(38,59,43,.18)}
+  .minecraft-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 57%}
+  .section{padding:28px 34px}
+  .intro{text-align:center;padding-top:6px}
+  .intro p{font:15px/1.7 Arial,sans-serif;color:#596456;margin:0 auto;max-width:500px}
+  .details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+  .detail{padding:17px 10px;text-align:center;background:#f1f0e5;border:1px solid #e2ddcc;border-radius:7px}
+  .detail .icon{font-size:22px;display:block;margin-bottom:8px}
+  .detail small{display:block;font:700 10px Arial,sans-serif;letter-spacing:1.5px;color:#7a806f;text-transform:uppercase;margin-bottom:6px}
+  .detail strong{font:700 15px/1.35 Arial,sans-serif;color:var(--forest)}
+  .divider{display:flex;align-items:center;gap:12px;color:#a18c61;font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+  .divider:before,.divider:after{content:"";height:1px;background:var(--line);flex:1}
+  .rsvp{background:#f7f4e9;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+  .rsvp h2{font-size:28px;color:var(--forest);margin:12px 0 8px}
+  .rsvp p{font:14px/1.6 Arial,sans-serif;color:#64705f;margin:0 auto 20px;max-width:440px}
+  label{display:block;text-align:left;font:700 11px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#65705f;margin:12px 0 6px}
+  input,select{width:100%;padding:13px 12px;border:1px solid #d5d0bf;border-radius:5px;background:#fffdf7;font:15px Arial,sans-serif;color:var(--ink);outline:none}
+  input:focus,select:focus{border-color:var(--leaf);box-shadow:0 0 0 3px rgba(82,123,69,.12)}
+  .form{max-width:420px;margin:0 auto;text-align:left}
+  .buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}
+  button{border:0;border-radius:5px;padding:14px 12px;font:700 13px Arial,sans-serif;cursor:pointer;transition:transform .15s,filter .15s}
+  button:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .yes{background:#426b43;color:white}.no{background:#e8e3d4;color:#5a6255}
+  .location{text-align:center}
+  .location h2{font-size:25px;color:var(--forest);margin:12px 0 7px}
+  .location p{font:14px/1.6 Arial,sans-serif;color:#66705f;margin:0 auto 17px;max-width:430px}
+  .maplink{display:inline-flex;align-items:center;gap:9px;text-decoration:none;background:var(--forest);color:#fffdf2;padding:13px 18px;border-radius:5px;font:700 13px Arial,sans-serif}
+  .footer{text-align:center;padding:22px 20px 27px;background:#e9eddf;color:#66735c}
+  .footer strong{display:block;font-size:18px;color:var(--forest);margin-bottom:5px}
+  .footer span{font:11px Arial,sans-serif;letter-spacing:1px}
+  .pixel-dots{height:8px;background:repeating-linear-gradient(90deg,#8a6748 0 8px,transparent 8px 16px,#789b58 16px 24px,transparent 24px 32px)}
+  @media(max-width:560px){
+    .page{width:min(100% - 16px,760px);margin:8px auto 20px}
+    .hero{padding:32px 18px 20px}.section{padding:24px 19px}
+    .minecraft-art{height:290px}.details{gap:6px}.detail{padding:14px 5px}
+    .detail strong{font-size:12px}.detail small{font-size:9px}
+    .buttons{grid-template-columns:1fr}
+  }
+
+.share{text-align:center}.share p{font:14px/1.6 Arial,sans-serif}.share button{background:#426b43;color:white}.calendar{display:block;margin:18px;color:#263b2b;font:14px Arial,sans-serif}a:focus-visible,button:focus-visible{outline:3px solid #b98224;outline-offset:4px}input,select{font-size:16px}button{min-height:48px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+</style>
+</head>
+<body>
+<main class="page">
+  <article class="invite">
+    <div class="topline"></div>
+    <header class="hero">
+      <div class="eyebrow">Una aventura está por comenzar</div>
+      <h1>¡RICARDO<br>CUMPLE 9!</h1>
+      <p class="subtitle">Prepara tu inventario, afila tu espada<br>y ven a celebrar conmigo.</p>
+      <div class="minecraft-art"><img src="minecraft.jpg" alt="Escena de Minecraft con Steve, bloques y vegetación"></div>
+    </header>
+
+    <section class="section intro">
+      <p>¡Estás invitado a mi mundo! Ven a pasar una tarde llena de juegos, sorpresas y mucha diversión. ¡No faltes!</p>
+      <div class="details">
+        <div class="detail"><span class="icon">📅</span><small>Fecha</small><strong>Sábado<br>12 de diciembre de 2026</strong></div>
+        <div class="detail"><span class="icon">🕒</span><small>Hora</small><strong>3:00<br>de la tarde</strong></div>
+        <div class="detail"><span class="icon">🎂</span><small>Nivel</small><strong>¡9 años!</strong></div>
+      </div>
+      <div class="divider">Guarda tu lugar en la partida</div>
+    </section>
+
+    <section class="section rsvp" id="confirmar">
+      <div class="eyebrow">Confirmación de asistencia</div>
+      <h2>¿Te unes a la aventura?</h2>
+      <p>Déjame saber si podrás venir. Completa tus datos y se abrirá WhatsApp. Pulsa «Enviar» en el chat para que recibamos tu respuesta.</p>
+      <form class="form" onsubmit="event.preventDefault();sendRSVP(true)">
+        <label for="guest">Tu nombre</label>
+        <input id="guest" type="text" maxlength="60" placeholder="¿Quién nos acompaña?" autocomplete="name" required>
+        <label for="count">¿Cuántas personas asistirán?</label>
+        <select id="count">
+          <option value="1">1 persona</option><option value="2">2 personas</option>
+          <option value="3">3 personas</option><option value="4">4 personas</option>
+          <option value="5">5 personas</option><option value="6">6 personas</option>
+          <option value="7">7 personas</option><option value="8">8 personas</option>
+        </select>
+        <label for="recipient">¿A quién envías tu confirmación?</label><select id="recipient"><option value="525552151188">Contacto 1 · 55 5215 1188</option><option value="525525294380">Contacto 2 · 55 2529 4380</option><option value="525552152042">Contacto 3 · 55 5215 2042</option></select><p style="margin-top:10px">Elige un contacto. Tu respuesta llegará a ese número cuando pulses Enviar en WhatsApp.</p><div class="buttons">
+          <button class="yes" type="button" onclick="sendRSVP(true)">✓ ¡Sí, ahí estaré!</button>
+          <button class="no" type="button" onclick="sendRSVP(false)">No podré asistir</button>
+        </div>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="section location">
+      <div class="eyebrow">Punto de encuentro</div>
+      <h2>¡Nos vemos en el salón!</h2>
+      <p>Abre la ubicación para encontrar el portal y llegar sin perderte.</p>
+      <a class="maplink" href="https://maps.app.goo.gl/qZhvpAEDbZKpvYss6?g_st=iw" target="_blank" rel="noopener">📍 VER UBICACIÓN EN MAPS</a>
+    </section>
+
+    <footer class="footer">
+      <strong>¡Gracias por ser parte de mi mundo!</strong>
+      <span>RICARDO · NIVEL 9 DESBLOQUEADO</span>
+    </footer>
+    <div class="section share"><a class="maplink" href="invitacion.png" download="Ricardo-cumple-9.png">↓ Descargar invitación como imagen</a><p>Comparte la imagen y el enlace para que tus invitados puedan confirmar.</p><button type="button" onclick="shareInvite()">Compartir invitación</button><a class="calendar" href="cumple-ricardo.ics" download>Agregar al calendario</a></div><div class="pixel-dots"></div>
+  </article>
+</main>
+<script>
+function sendRSVP(going){
+  const name = document.getElementById('guest').value.trim();
+  const count = document.getElementById('count').value;
+  if(!name){
+    document.getElementById('guest').focus();
+    document.getElementById('status').textContent='Escribe tu nombre para continuar.';
+    return;
+  }
+  const message = going
+    ? `¡Hola! Soy ${name} 🎮⛏️. Confirmo mi entrada al mundo de Ricardo: somos ${count} ${count === '1' ? 'invitado en total' : 'invitados en total'}. ¡Inventario listo para desbloquear el nivel 9! Nos vemos en la fiesta el 12 de diciembre. 🟩🎂`
+    : `¡Hola! Soy ${name}. Muchas gracias por la invitación al cumpleaños de Ricardo, pero esta vez no podré asistir. ¡Espero que la pase increíble!`;
+  document.getElementById('status').textContent='Pulsa Enviar en WhatsApp para completar tu respuesta.';
+  window.location.href='https://wa.me/'+document.getElementById('recipient').value+'?text=' + encodeURIComponent(message);
+}
+async function shareInvite(){
+ const url=location.protocol.startsWith('http')?location.href.split('#')[0]:'https://tavosoriano-sys.github.io/MinecraftRichie/';
+ const text='¡Ricardo cumple 9! 🎮 Te esperamos el sábado 12 de diciembre a las 3:00 p. m. Confirma aquí:';
+ if(navigator.share){try{await navigator.share({title:'¡Ricardo cumple 9!',text,url});}catch(e){if(e.name!=='AbortError')location.href='https://wa.me/?text='+encodeURIComponent(text+' '+url);}}
+ else location.href='https://wa.me/?text='+encodeURIComponent(text+' '+url);
+}
+</script>
+</body>
+</html>
